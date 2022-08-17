@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+</head>
+<body class="body">
+    <header class="header container">
+        <h1 class="header__title">Список дел</h1>
+    </header>
+    <main class="main container">
+        <div class="main__today today">
+            <h2 class="today__title">Список дел на сегодня</h2>
+            <ul class="today__items to-do-list">
+                <li class="today__empty-items to-do-list__empty">
+                    <p class="to-do-list__empty-text">Здесь ничего нет! Чтобы добавить задачу на сегодня, введите текст в поле ниже и нажмите "добавить"</p>
+                </li>
+                <li class="today__item to-do-list__item">
+                    <span class="to-do-list__text"></span>
+                    <button class="to-do-list__button-done button" type="button" data-action="done" id="today-done"></button>
+                    <button class="to-do-list__button-delete button" type="button" data-action="delete" id="today-delete"></button>
+                </li>
+            </ul>
+            <form class="totay__form add-task" id="totay__form">
+                <input type="text" class="add-task__input" id="today__input" placeholder="Текст задачи на сегодня" required>
+                <button class="add-task__button today-button" type="submit">Добавить</button>
+            </form>
+        </div>
+        <div class="main__tomorrow tomorrow">
+            <h2 class="tomorrow__title">Список дел на сегодня</h2>
+            <ul class="tomorrow__items to-do-list">
+                <li class="tomorrow__empty-items to-do-list__empty">
+                    <p class="to-do-list__empty-text">Здесь ничего нет! Чтобы добавить задачу на завтра, введите текст в поле ниже и нажмите "добавить"</p>
+                </li>
+                <li class="tomorrow__item to-do-list__item">
+                    <span class="to-do-list__text"></span>
+                    <button class="to-do-list__button-done button" type="button" data-action="done" id="tomorrow-done"></button>
+                    <button class="to-do-list__button-delete button" type="button" data-action="delete" id="tomorrow-delete"></button>
+                </li>
+            </ul>
+            <form class="tomorrow__form add-task" id="tomorrow__form">
+                <input type="text" class="add-task__input" id="tomorrow__input" placeholder="Текст задачи на завтра" required>
+                <button class="add-task__button tomorrow-button" type="submit">Добавить</button>
+            </form>
+        </div>
+    </main>
+    <footer class="footer container"></footer>
+</body>
+</html>
