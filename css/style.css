@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap');
+:root {
+    --body-bg: rgb(216, 216, 216);
+    --today-bg: rgb(187, 187, 187);
+    --tomorrow-bg: rgb(200, 200, 200);
+}
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+}
+.body {
+    background-color: var(--body-bg);
+    min-height: 100vh;
+    display: grid;
+    grid-template: minmax(100px, auto) 1fr minmax(50px, auto) / 1fr;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.header {
+    align-self: center;
+}
+.header__title {
+    text-transform: uppercase;
+}
+.main {
+    display: flex;
+    gap: 50px 100px;
+}
+.today {
+    background-color: var(--today-bg);
+    padding: 15px;
+}
+.tomorrow {
+    background-color: var(--tomorrow-bg);
+    padding: 15px;
+}
+.to-do-list {
+    list-style-type: none;
+}
+.to-do-list__item {
+    display: grid;
+    grid-template: 1fr / 1fr 50px 50px;
+    align-items: center;
+}
+.button {
+    cursor: pointer;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    justify-self: end;
+}
+.button img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+.add-task {
+    display: grid;
+    grid-template: 1fr / 1fr min-content;
+    column-gap: 30px;
+}
+.add-task__input {
+    padding: 0 10px;
+}
+.add-task__button {
+    padding: 15px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+}
