@@ -4,25 +4,34 @@
     border: 0;
     box-sizing: border-box;
 }
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap');
 :root {
     --body-bg: rgb(216, 216, 216);
     --today-bg: rgb(187, 187, 187);
     --tomorrow-bg: rgb(200, 200, 200);
-}
-h1, h2, h3 {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 200;
 }
 .body {
     background-color: var(--body-bg);
     min-height: 100vh;
     display: grid;
     grid-template: minmax(100px, auto) 1fr minmax(50px, auto) / 1fr;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+}
+h1, h2, h3 {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    margin: 0 0 15px 0;
 }
 .container {
     max-width: 1200px;
     margin: 0 auto;
+}
+@media (max-width: 1000px) {
+    .container {
+        max-width: 90%;
+    }
 }
 .header {
     align-self: center;
@@ -31,51 +40,98 @@ h1, h2, h3 {
     text-transform: uppercase;
 }
 .main {
-    display: flex;
-    gap: 50px 100px;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    gap: 30px 5px;
+}
+@media (max-width: 1000px) {
+    .main {
+        grid-template: 1fr 1fr / 1fr;
+    }
 }
 .today {
     background-color: var(--today-bg);
-    padding: 15px;
+    padding: 15px 30px;
+}
+.today__title,
+.tomorrow__title {
+    padding: 20px 25px 25px;
 }
 .tomorrow {
     background-color: var(--tomorrow-bg);
-    padding: 15px;
+    padding: 15px 30px;
 }
 .to-do-list {
     list-style-type: none;
 }
+.to-do-list__empty {
+    background-color: rgba(255, 255, 255, 1);
+    padding: 15px 30px 20px;
+    margin: 0 -30px;
+}
+.to-do-list__empty-text {
+    text-align: center;
+}
 .to-do-list__item {
     display: grid;
-    grid-template: 1fr / 1fr 50px 50px;
+    grid-template: minmax(50px, 1fr) / 1fr 50px 50px;
     align-items: center;
+    margin: 0 -30px;
+    padding: 0 40px;
+}
+.to-do-list__item:nth-child(even) {
+    background-color: rgb(141, 141, 141);
+}
+.to-do-list__item:nth-child(odd) {
+    background-color: rgb(210, 210, 210);
+}
+.to-do-list__item_done {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+.today__items,
+.tomorrow__items {
+    margin: 0 0 50px 0;
 }
 .button {
     cursor: pointer;
     position: relative;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    width: 50px;
+    height: 50px;
     justify-self: end;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button:hover {
+    background-color: rgb(179, 179, 179);
 }
 .button img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+    width: 30px;
+    height: 30px;
     pointer-events: none;
 }
 .add-task {
     display: grid;
-    grid-template: 1fr / 1fr min-content;
-    column-gap: 30px;
+    grid-template: 1fr min-content / 1fr;
+    row-gap: 15px;
 }
 .add-task__input {
-    padding: 0 10px;
+    padding: 15px 10px;
+    
+}
+.add-task__input::placeholder {
+    text-align: center;
 }
 .add-task__button {
     padding: 15px 25px;
-    border-radius: 25px;
+    border-radius: 4px;
     cursor: pointer;
+}
+.add-task__button:hover {
+    background-color: rgb(179, 179, 179);
+}
+.footer {
+    padding: 15px;
 }

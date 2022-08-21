@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="body">
@@ -15,8 +17,26 @@
         <div class="main__today today">
             <h2 class="today__title">Список дел на сегодня</h2>
             <ul class="today__items to-do-list">
-                <li class="today__empty-items to-do-list__empty">
+                <!-- <li class="today__empty-item to-do-list__empty">
                     <p class="to-do-list__empty-text">Здесь ничего нет!<br>Чтобы добавить задачу на сегодня, введите текст в поле ниже и нажмите "добавить"</p>
+                </li> -->
+                <li class="today__item to-do-list__item">
+                    <span class="to-do-list__text">сделать что-нибудь</span>
+                    <button class="to-do-list__button-done button" type="button" data-action="done" id="today-done">
+                        <img src="img/done.svg" alt="">
+                    </button>
+                    <button class="to-do-list__button-delete button" type="button" data-action="delete" id="today-delete">
+                        <img src="img/delete.svg" alt="">
+                    </button>
+                </li>
+                <li class="today__item to-do-list__item to-do-list__item_done">
+                    <span class="to-do-list__text">сделать что-нибудь</span>
+                    <button class="to-do-list__button-done button" type="button" data-action="done" id="today-done">
+                        <img src="img/done.svg" alt="">
+                    </button>
+                    <button class="to-do-list__button-delete button" type="button" data-action="delete" id="today-delete">
+                        <img src="img/delete.svg" alt="">
+                    </button>
                 </li>
                 <li class="today__item to-do-list__item">
                     <span class="to-do-list__text">сделать что-нибудь</span>
@@ -36,10 +56,10 @@
         <div class="main__tomorrow tomorrow">
             <h2 class="tomorrow__title">Список дел на завтра</h2>
             <ul class="tomorrow__items to-do-list">
-                <li class="tomorrow__empty-items to-do-list__empty">
+                <li class="tomorrow__empty-item to-do-list__empty">
                     <p class="to-do-list__empty-text">Здесь ничего нет!<br>Чтобы добавить задачу на завтра, введите текст в поле ниже и нажмите "добавить"</p>
                 </li>
-                <li class="tomorrow__item to-do-list__item">
+                <!-- <li class="tomorrow__item to-do-list__item">
                     <span class="to-do-list__text">сделать что-нибудь</span>
                     <button class="to-do-list__button-done button" type="button" data-action="done" id="tomorrow-done">
                         <img src="img/done.svg" alt="">
@@ -47,7 +67,7 @@
                     <button class="to-do-list__button-delete button" type="button" data-action="delete" id="tomorrow-delete">
                         <img src="img/delete.svg" alt="">
                     </button>
-                </li>
+                </li> -->
             </ul>
             <form class="tomorrow__form add-task" id="tomorrow__form">
                 <input type="text" class="add-task__input" id="tomorrow__input" placeholder="Текст задачи на завтра" required>
@@ -57,7 +77,7 @@
     </main>
     <footer class="footer container">
         <p class="footer__text">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Учебный проект "Список дел на сегодня и завтра"
         </p>
     </footer>
 </body>
